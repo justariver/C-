@@ -1,0 +1,5 @@
+1、  asm（指令字符串）：允许在程序中加入 汇编代码（这是什么？ 暂时未知 等待后续 补充）
+2、  auto（自动）是存储类型标识符 表明变量自动就有本地范围 
+     规则1：声明为auto（不是auto&）的变量，忽视掉初始化表达式的顶层const。即对有const的普通类型(int 、double等)忽视const，对常量指      针（顶层const）变为普通指针，对指向常量（底层const）的常量指针（顶层cosnt）变为指向常量的指针（底层const）。
+     规则2：声明为auto&的变量，保持初始化表达式的顶层const或volatile 属性。
+     规则3：若希望auto推导的是顶层const，加上const，即const auto。
