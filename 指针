@@ -1,0 +1,43 @@
+一 ：  c++ 允许 指向指针的指针
+    1.定义 必须 在变量名前两个**
+     例如： int **t；
+二 ： 传递指针给函数 
+void getSeconds(unsigned long *par);
+ 
+int main ()
+{
+   unsigned long sec;
+ 
+ 
+   getSeconds( &sec );
+ 
+   // 输出实际值
+   cout << "Number of seconds :" << sec << endl;
+ 
+   return 0;
+}
+ 
+void getSeconds(unsigned long *par)
+{
+   // 获取当前的秒数
+   *par = time( NULL );
+   return;
+}
+
+三 ： 从函数返回指针
+  要先声明一个指针类型的函数
+// 要生成和返回随机数的函数
+int * getRandom( )
+{
+  static int  r[10];
+ 
+  // 设置种子
+  srand( (unsigned)time( NULL ) );
+  for (int i = 0; i < 10; ++i)
+  {
+    r[i] = rand();
+    cout << r[i] << endl;
+  }
+ 
+  return r;
+}
