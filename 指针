@@ -1,6 +1,13 @@
 一 ：  c++ 允许 指向指针的指针
     1.定义 必须 在变量名前两个**
      例如： int **t；
+
+const int *p =&a  常量指针 指针指向的地址可以改但是 a的值不能改
+ 
+int * const p = &a  指针常量 指针指向的地址不能能改 但是值可以改
+
+
+
 二 ： 传递指针给函数 
 void getSeconds(unsigned long *par);
  
